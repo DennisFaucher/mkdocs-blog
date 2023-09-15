@@ -16,4 +16,6 @@ echo "## 🔌 vSwitch 🔌 " >> index.md
 echo "\`\`\`\`bash" >> index.md
 pwsh -F /home/dennis/Documents/MkDocs/vcenter-mkdocs/docs/get-virtualswitch-pwsh.ps1
 echo "\`\`\`\`" >> index.md
-
+cd /home/dennis/Documents/MkDocs/vcenter-mkdocs
+mkdocs build
+scp -r /home/dennis/Documents/MkDocs/mkdocs-blog/site/* dennis@plex-addons:/var/www/html/mkdocs/
